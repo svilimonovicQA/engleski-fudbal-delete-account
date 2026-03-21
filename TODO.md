@@ -1,0 +1,6 @@
+- [x] Add `logo.jpg` to the header in `index.html`
+- [x] Add EN/SR language toggle UI
+- [x] Add full Serbian translation content
+- [x] Implement language switching JavaScript
+- [x] Ensure responsive styling for logo + toggle + bilingual blocks
+- [x] Verify final structure and consistency

@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Account and Data Deletion information for the Engleski Fudbal mobile app."
+    />
+    <title>Account and Data Deletion – Engleski Fudbal</title>
+    <style>
+      :root {
+        --bg: #0b1220;
+        --card: #111a2e;
+        --text: #eaf0ff;
+        --muted: #b9c6e3;
+        --accent: #66a3ff;
+        --accent-2: #8dd3ff;
+        --border: #243354;
+        --ok: #66d19e;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: linear-gradient(180deg, #070d19 0%, #0b1220 100%);
+        color: var(--text);
+        line-height: 1.65;
+      }
+
+      .container {
+        width: min(980px, 92%);
+        margin: 42px auto 64px;
+      }
+
+      .card {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.02) 0%,
+            rgba(255, 255, 255, 0.01) 100%
+          ),
+          var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 30px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+      }
+
+      .header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-width: 0;
+      }
+
+      .logo {
+        width: 54px;
+        height: 54px;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        flex-shrink: 0;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(102, 163, 255, 0.12);
+        color: var(--accent-2);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        border: 1px solid rgba(102, 163, 255, 0.35);
+        margin-bottom: 14px;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(1.7rem, 3.2vw, 2.35rem);
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+      }
+
+      .subtitle {
+        margin: 0 0 24px;
+        color: var(--muted);
+        font-size: 1rem;
+      }
+
+      h2 {
+        margin-top: 28px;
+        margin-bottom: 10px;
+        font-size: 1.15rem;
+        color: #f4f7ff;
+      }
+
+      p {
+        margin: 8px 0 14px;
+        color: var(--text);
+      }
+
+      ul,
+      ol {
+        margin: 8px 0 14px 20px;
+        padding: 0;
+      }
+
+      li {
+        margin: 8px 0;
+        color: var(--text);
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .callout {
+        border-left: 4px solid var(--accent);
+        background: rgba(102, 163, 255, 0.08);
+        padding: 14px 16px;
+        border-radius: 10px;
+        margin: 12px 0 6px;
+      }
+
+      .ok {
+        color: var(--ok);
+        font-weight: 600;
+      }
+
+      code {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 6px;
+        padding: 2px 7px;
+        font-size: 0.92em;
+      }
+
+      .lang-toggle {
+        display: inline-flex;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .lang-btn {
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        padding: 8px 12px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .lang-btn.active {
+        background: rgba(102, 163, 255, 0.18);
+        color: var(--text);
+      }
+
+      .lang-block[hidden] {
+        display: none !important;
+      }
+
+      .footer {
+        margin-top: 28px;
+        padding-top: 18px;
+        border-top: 1px dashed var(--border);
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 640px) {
+        .card {
+          padding: 22px;
+        }
+
+        .header {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .lang-toggle {
+          align-self: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <div class="header">
+          <div class="brand">
+            <img src="logo.jpg" alt="Engleski Fudbal logo" class="logo" />
+            <div>
+              <span class="badge">Google Play Compliance</span>
+              <h1>Account and Data Deletion – Engleski Fudbal</h1>
+            </div>
+          </div>
+
+          <div class="lang-toggle" aria-label="Language switcher">
+            <button id="btn-en" class="lang-btn active" type="button">
+              EN
+            </button>
+            <button id="btn-sr" class="lang-btn" type="button">SR</button>
+          </div>
+        </div>
+
+        <div id="lang-en" class="lang-block">
+          <p class="subtitle">
+            This page explains how users can request account and data deletion
+            for the Engleski Fudbal app.
+          </p>
+
+          <h2>Developer/App</h2>
+          <p><strong>Engleski Fudbal / Engleski Fudbal</strong></p>
+
+          <h2>How to request deletion</h2>
+          <ol>
+            <li>
+              Send an email to: <strong>engleski.fudbal@gmail.com</strong> with
+              subject: <code>Delete my account</code>
+            </li>
+            <li>
+              Include the email address used in the app and your User ID (UID),
+              if available.
+            </li>
+            <li>
+              We will confirm your request and process it within
+              <strong>30 days</strong>.
+            </li>
+          </ol>
+
+          <h2>
+            What is currently deleted when we process an account deletion
+            request
+          </h2>
+          <p>
+            User profile data from Firestore <code>users/{uid}</code> including:
+          </p>
+          <ul>
+            <li>email</li>
+            <li>displayName</li>
+            <li>username</li>
+            <li>soccerUsername</li>
+            <li>favoriteClub</li>
+            <li>createdAt</li>
+            <li>isVerified</li>
+            <li>profilePhotoUrl (if present)</li>
+          </ul>
+
+          <p>Profile photo from Firebase Storage path:</p>
+          <ul>
+            <li><code>users/{uid}/profile.jpg</code></li>
+          </ul>
+
+          <p>Firebase Authentication account (email/password credentials).</p>
+
+          <h2>What may be retained (current app architecture)</h2>
+          <ul>
+            <li>
+              Quiz attempt and leaderboard-related records currently stored in
+              Firestore collection <code>userQuizAttempts</code> may remain
+              unless explicitly removed by backend/admin deletion workflow.
+            </li>
+            <li>
+              Logs maintained by platform providers (Firebase/Google Play
+              infrastructure) may be retained for fraud prevention, abuse
+              prevention, legal, and operational purposes.
+            </li>
+          </ul>
+
+          <h2>Retention period</h2>
+          <ul>
+            <li>
+              Deletion requests are processed within <strong>30 days</strong>.
+            </li>
+            <li>
+              Any legally required retention is kept only for the minimum
+              required period under applicable law/platform policy, then
+              deleted.
+            </li>
+          </ul>
+
+          <h2>Important transparency note</h2>
+          <div class="callout">
+            <p class="muted">
+              The current mobile app does not yet expose an in-app “Delete
+              Account” button.
+            </p>
+            <p class="ok">
+              Account/data deletion is currently handled via support request
+              email.
+            </p>
+          </div>
+
+          <h2>Contact</h2>
+          <p><strong>engleski.fudbal@gmail.com</strong></p>
+        </div>
+
+        <div id="lang-sr" class="lang-block" hidden>
+          <p class="subtitle">
+            Ova stranica objašnjava kako korisnici mogu da zatraže brisanje
+            naloga i podataka za aplikaciju Engleski Fudbal.
+          </p>
+
+          <h2>Programer/Aplikacija</h2>
+          <p><strong>Engleski Fudbal / Engleski Fudbal</strong></p>
+
+          <h2>Kako zatražiti brisanje</h2>
+          <ol>
+            <li>
+              Pošaljite email na: <strong>engleski.fudbal@gmail.com</strong> sa
+              naslovom: <code>Delete my account</code>
+            </li>
+            <li>
+              Uključite email adresu korišćenu u aplikaciji i vaš korisnički ID
+              (UID), ako je dostupan.
+            </li>
+            <li>
+              Potvrdićemo vaš zahtev i obraditi ga u roku od
+              <strong>30 dana</strong>.
+            </li>
+          </ol>
+
+          <h2>Šta se trenutno briše kada obradimo zahtev za brisanje naloga</h2>
+          <p>
+            Podaci korisničkog profila iz Firestore <code>users/{uid}</code>
+            uključuju:
+          </p>
+          <ul>
+            <li>email</li>
+            <li>displayName</li>
+            <li>username</li>
+            <li>soccerUsername</li>
+            <li>favoriteClub</li>
+            <li>createdAt</li>
+            <li>isVerified</li>
+            <li>profilePhotoUrl (ako postoji)</li>
+          </ul>
+
+          <p>Profilna fotografija iz Firebase Storage putanje:</p>
+          <ul>
+            <li><code>users/{uid}/profile.jpg</code></li>
+          </ul>
+
+          <p>Firebase Authentication nalog (email/lozinka kredencijali).</p>
+
+          <h2>Šta može biti zadržano (trenutna arhitektura aplikacije)</h2>
+          <ul>
+            <li>
+              Zapisi o pokušajima kviza i leaderboard podaci koji se trenutno
+              čuvaju u Firestore kolekciji <code>userQuizAttempts</code> mogu
+              ostati osim ako nisu eksplicitno uklonjeni kroz backend/admin
+              workflow brisanja.
+            </li>
+            <li>
+              Logovi koje održavaju platform provajderi (Firebase/Google Play
+              infrastruktura) mogu biti zadržani zbog sprečavanja prevara,
+              zloupotreba, pravnih i operativnih razloga.
+            </li>
+          </ul>
+
+          <h2>Period zadržavanja</h2>
+          <ul>
+            <li>
+              Zahtevi za brisanje se obrađuju u roku od
+              <strong>30 dana</strong>.
+            </li>
+            <li>
+              Svako zakonski obavezno zadržavanje podataka čuva se samo
+              minimalno neophodan period prema važećem zakonu/politici
+              platforme, a zatim se briše.
+            </li>
+          </ul>
+
+          <h2>Važna napomena o transparentnosti</h2>
+          <div class="callout">
+            <p class="muted">
+              Trenutna mobilna aplikacija još uvek nema in-app dugme “Delete
+              Account”.
+            </p>
+            <p class="ok">
+              Brisanje naloga/podataka se trenutno rešava putem email zahteva
+              podršci.
+            </p>
+          </div>
+
+          <h2>Kontakt</h2>
+          <p><strong>engleski.fudbal@gmail.com</strong></p>
+        </div>
+
+        <div class="footer">Last updated: <span id="last-updated"></span></div>
+      </section>
+    </main>
+
+    <script>
+      const now = new Date();
+      document.getElementById("last-updated").textContent =
+        now.toLocaleDateString();
+
+      const btnEn = document.getElementById("btn-en");
+      const btnSr = document.getElementById("btn-sr");
+      const blockEn = document.getElementById("lang-en");
+      const blockSr = document.getElementById("lang-sr");
+
+      function setLanguage(lang) {
+        const isEnglish = lang === "en";
+        blockEn.hidden = !isEnglish;
+        blockSr.hidden = isEnglish;
+
+        btnEn.classList.toggle("active", isEnglish);
+        btnSr.classList.toggle("active", !isEnglish);
+        document.documentElement.lang = isEnglish ? "en" : "sr";
+      }
+
+      btnEn.addEventListener("click", () => setLanguage("en"));
+      btnSr.addEventListener("click", () => setLanguage("sr"));
+    </script>
+  </body>
+</html>
