@@ -53,25 +53,27 @@
 
       .header {
         display: flex;
+        justify-content: flex-end;
         align-items: flex-start;
-        justify-content: space-between;
-        gap: 18px;
+        margin-bottom: 10px;
       }
 
       .brand {
-        display: flex;
-        align-items: center;
-        gap: 14px;
         min-width: 0;
+        text-align: center;
+      }
+
+      .logo-wrap {
+        text-align: center;
+        margin-bottom: 10px;
       }
 
       .logo {
-        width: 54px;
-        height: 54px;
+        width: clamp(72px, 14vw, 110px);
+        height: auto;
         object-fit: cover;
-        border-radius: 12px;
+        border-radius: 14px;
         border: 1px solid var(--border);
-        flex-shrink: 0;
       }
 
       .badge {
@@ -93,12 +95,14 @@
         font-size: clamp(1.7rem, 3.2vw, 2.35rem);
         line-height: 1.2;
         letter-spacing: -0.01em;
+        text-align: center;
       }
 
       .subtitle {
         margin: 0 0 24px;
         color: var(--muted);
         font-size: 1rem;
+        text-align: center;
       }
 
       h2 {
@@ -151,24 +155,36 @@
 
       .lang-toggle {
         display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 2px 4px;
         border: 1px solid var(--border);
-        border-radius: 10px;
-        overflow: hidden;
-        background: rgba(255, 255, 255, 0.03);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
       }
 
       .lang-btn {
-        border: 0;
+        border: 1px solid transparent;
         background: transparent;
         color: var(--muted);
-        padding: 8px 12px;
+        padding: 8px 14px;
+        border-radius: 999px;
         font-weight: 600;
+        line-height: 1;
         cursor: pointer;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .lang-btn:hover {
+        color: var(--text);
       }
 
       .lang-btn.active {
-        background: rgba(102, 163, 255, 0.18);
+        background: rgba(102, 163, 255, 0.22);
         color: var(--text);
+        border-color: rgba(102, 163, 255, 0.35);
       }
 
       .lang-block[hidden] {
@@ -201,20 +217,21 @@
         }
 
         .header {
-          flex-direction: column;
-          align-items: stretch;
-          gap: 12px;
+          justify-content: flex-end;
+          margin-bottom: 12px;
         }
 
         .brand {
-          align-items: flex-start;
-          gap: 10px;
+          text-align: center;
+        }
+
+        .logo-wrap {
+          margin-bottom: 8px;
         }
 
         .logo {
-          width: 44px;
-          height: 44px;
-          border-radius: 10px;
+          width: clamp(62px, 22vw, 84px);
+          border-radius: 12px;
         }
 
         h1 {
@@ -256,18 +273,17 @@
         }
 
         .lang-toggle {
-          align-self: flex-start;
-          width: 100%;
-          max-width: 260px;
-          padding: 2px;
-          border-radius: 12px;
+          width: auto;
+          max-width: 100%;
+          margin: 0;
+          padding: 2px 4px;
+          gap: 4px;
         }
 
         .lang-btn {
-          flex: 1;
-          min-height: 40px;
-          padding: 9px 12px;
-          font-size: 0.92rem;
+          min-height: 30px;
+          padding: 5px 10px;
+          font-size: 0.82rem;
         }
 
         .footer {
@@ -284,6 +300,10 @@
       }
 
       @media (max-width: 380px) {
+        .header {
+          margin-bottom: 10px;
+        }
+
         .container {
           margin-top: 10px;
           margin-bottom: 16px;
@@ -314,19 +334,21 @@
     <main class="container">
       <section class="card">
         <div class="header">
-          <div class="brand">
-            <img src="logo.jpg" alt="Engleski Fudbal logo" class="logo" />
-            <div>
-              <span class="badge">Mobile App Compliance (Android & iOS)</span>
-              <h1>Account and Data Deletion – Engleski Fudbal</h1>
-            </div>
-          </div>
-
           <div class="lang-toggle" aria-label="Language switcher">
             <button id="btn-en" class="lang-btn" type="button">EN</button>
             <button id="btn-sr" class="lang-btn active" type="button">
               SR
             </button>
+          </div>
+        </div>
+
+        <div class="brand">
+          <div class="logo-wrap">
+            <img src="logo.jpg" alt="Engleski Fudbal logo" class="logo" />
+          </div>
+          <div>
+            <span class="badge">Mobile App Compliance (Android & iOS)</span>
+            <h1>Account and Data Deletion – Engleski Fudbal</h1>
           </div>
         </div>
 
