@@ -184,13 +184,62 @@
       }
 
       @media (max-width: 640px) {
+        body {
+          line-height: 1.55;
+        }
+
+        .container {
+          width: min(100%, 94%);
+          margin: 18px auto 28px;
+        }
+
         .card {
-          padding: 22px;
+          padding: 18px 16px;
+          border-radius: 14px;
         }
 
         .header {
           flex-direction: column;
           align-items: stretch;
+          gap: 12px;
+        }
+
+        .brand {
+          align-items: flex-start;
+          gap: 10px;
+        }
+
+        .logo {
+          width: 46px;
+          height: 46px;
+          border-radius: 10px;
+        }
+
+        h1 {
+          margin-bottom: 8px;
+          font-size: clamp(1.35rem, 6.2vw, 1.75rem);
+          line-height: 1.25;
+        }
+
+        .subtitle {
+          margin-bottom: 16px;
+          font-size: 0.96rem;
+        }
+
+        h2 {
+          margin-top: 20px;
+          margin-bottom: 8px;
+          font-size: 1.02rem;
+        }
+
+        p,
+        li {
+          font-size: 0.95rem;
+        }
+
+        ul,
+        ol {
+          margin: 8px 0 14px 18px;
         }
 
         .badge {
@@ -206,6 +255,46 @@
 
         .lang-toggle {
           align-self: flex-start;
+          width: 100%;
+          max-width: 260px;
+        }
+
+        .lang-btn {
+          flex: 1;
+          min-height: 42px;
+          padding: 10px 12px;
+          font-size: 0.95rem;
+        }
+
+        code {
+          white-space: normal;
+          overflow-wrap: anywhere;
+          word-break: break-word;
+        }
+      }
+
+      @media (max-width: 380px) {
+        .container {
+          width: 96%;
+          margin-top: 12px;
+          margin-bottom: 22px;
+        }
+
+        .card {
+          padding: 14px 12px;
+        }
+
+        .logo {
+          width: 40px;
+          height: 40px;
+        }
+
+        .lang-toggle {
+          max-width: 100%;
+        }
+
+        .footer {
+          font-size: 0.9rem;
         }
       }
     </style>
