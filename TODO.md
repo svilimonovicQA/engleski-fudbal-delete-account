@@ -1,4 +1,6 @@
 - [x] Update badge text to a platform-neutral Android+iOS label
 - [x] Improve badge styling for mobile responsiveness
 - [x] Set Serbian (SR) as default selected language in markup and JS
+- [x] Add translatable footer label for both EN and SR
+- [x] Wire footer translation into language toggle logic
 - [ ] Verify changes in browser
