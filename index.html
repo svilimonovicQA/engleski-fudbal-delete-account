@@ -193,6 +193,17 @@
           align-items: stretch;
         }
 
+        .badge {
+          display: inline-block;
+          max-width: 100%;
+          font-size: 11px;
+          padding: 5px 10px;
+          letter-spacing: 0.02em;
+          white-space: normal;
+          line-height: 1.3;
+          margin-bottom: 10px;
+        }
+
         .lang-toggle {
           align-self: flex-start;
         }
@@ -206,20 +217,20 @@
           <div class="brand">
             <img src="logo.jpg" alt="Engleski Fudbal logo" class="logo" />
             <div>
-              <span class="badge">Google Play Compliance</span>
+              <span class="badge">Mobile App Compliance (Android & iOS)</span>
               <h1>Account and Data Deletion – Engleski Fudbal</h1>
             </div>
           </div>
 
           <div class="lang-toggle" aria-label="Language switcher">
-            <button id="btn-en" class="lang-btn active" type="button">
-              EN
+            <button id="btn-en" class="lang-btn" type="button">EN</button>
+            <button id="btn-sr" class="lang-btn active" type="button">
+              SR
             </button>
-            <button id="btn-sr" class="lang-btn" type="button">SR</button>
           </div>
         </div>
 
-        <div id="lang-en" class="lang-block">
+        <div id="lang-en" class="lang-block" hidden>
           <p class="subtitle">
             This page explains how users can request account and data deletion
             for the Engleski Fudbal app.
@@ -311,7 +322,7 @@
           <p><strong>engleski.fudbal@gmail.com</strong></p>
         </div>
 
-        <div id="lang-sr" class="lang-block" hidden>
+        <div id="lang-sr" class="lang-block">
           <p class="subtitle">
             Ova stranica objašnjava kako korisnici mogu da zatraže brisanje
             naloga i podataka za aplikaciju Engleski Fudbal.
@@ -426,6 +437,8 @@
         btnSr.classList.toggle("active", !isEnglish);
         document.documentElement.lang = isEnglish ? "en" : "sr";
       }
+
+      setLanguage("sr");
 
       btnEn.addEventListener("click", () => setLanguage("en"));
       btnSr.addEventListener("click", () => setLanguage("sr"));

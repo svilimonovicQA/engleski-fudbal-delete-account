@@ -1,6 +1,4 @@
-- [x] Add `logo.jpg` to the header in `index.html`
-- [x] Add EN/SR language toggle UI
-- [x] Add full Serbian translation content
-- [x] Implement language switching JavaScript
-- [x] Ensure responsive styling for logo + toggle + bilingual blocks
-- [x] Verify final structure and consistency
+- [x] Update badge text to a platform-neutral Android+iOS label
+- [x] Improve badge styling for mobile responsiveness
+- [x] Set Serbian (SR) as default selected language in markup and JS
+- [ ] Verify changes in browser
